@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Recepty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Online Recepty</h1>
+
+    <div class="form-container">
+        <h2>Přidat nový recept</h2>
+        <input type="text" id="recipe-title" placeholder="Název receptu">
+        <textarea id="recipe-ingredients" rows="4" placeholder="Ingredience (oddělené čárkou)"></textarea>
+        <textarea id="recipe-steps" rows="4" placeholder="Postup (oddělený čárkou)"></textarea>
+        <select id="recipe-type">
+            <option value="slané">Slané</option>
+            <option value="sladké">Sladké</option>
+        </select>
+        <button onclick="addRecipe()">Přidat recept</button>
+    </div>
+
+    <div class="filter-buttons">
+        <button onclick="filterRecipes('slané')">Slané</button>
+        <button onclick="filterRecipes('sladké')">Sladké</button>
+        <button onclick="filterRecipes('vše')">Vše</button>
+    </div>
+
+    <div id="recipes"></div>
+<script src="script.js"></script>
+</body>
+</html>
